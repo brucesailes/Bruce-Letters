@@ -1,0 +1,8 @@
+/* styles.css or styles.scss */
+
+.bg-paper {
+    background-image: url('path-to-paper-texture.png');
+    background-size: cover;
+    background-repeat: repeat;
+  }
+  
