@@ -27,7 +27,7 @@ export default function LettersPage({ posts = [] }: { posts?: Post[] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const postFiles = await fs.readdir(postsDirectory);
 
@@ -58,6 +58,5 @@ export async function getStaticProps() {
     props: {
       posts,
     },
-    revalidate: 60,
   };
 }
