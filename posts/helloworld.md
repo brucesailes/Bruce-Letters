@@ -1,6 +1,8 @@
-# Welcome to "The Letters to Mankind" Blog
+---
+Title: Welcome to "The Letters to Mankind" Blog
+Date: January 06, 2024
+---
 
-![Letters to Mankind](/public/Letters.png)
 
 Welcome to "The Letters to Mankind," a source of daily inspiration and motivation for individuals who seek empowerment and guidance on their life journey. This blog is dedicated to those who hold a deep belief in God and recognize the significance of spiritual and personal growth.
 

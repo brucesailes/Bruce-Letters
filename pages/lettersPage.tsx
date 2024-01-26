@@ -43,7 +43,8 @@ export async function getServerSideProps() {
       const title = matterResult.data.title || 'Title';
 
       // Convert the date to a serializable string
-      const date = matterResult.data.date ? matterResult.data.date.toISOString() : 'Date';
+      const date = matterResult.data.date ? new Date(matterResult.data.date).toLocaleDateString() : 'Date';
+
 
       return {
         content: matterResult.content,
