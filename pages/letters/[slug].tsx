@@ -13,7 +13,7 @@ const LetterPage = () => {
   React.useEffect(() => {
     if (slug) {
       // Fetch the letter content based on the slug
-      fetch(`/api/apiLetters/${slug}`)
+      fetch(`/api/letters/${slug}`)
         .then((response) => response.json())
         .then((data) => {
           setLetterContent(data.content);
@@ -28,9 +28,9 @@ const LetterPage = () => {
     <div className="bg-white p-8 md:p-20 rounded shadow-md">
       {letterContent ? (
         <div>
-          <h1 className="text-center text-3xl font-bold mb-4">Letter</h1>
+          <h1 className="text-center text-3xl font-bold mb-4">{slug}</h1>
           {/* Render the Markdown content using react-markdown */}
-          <ReactMarkdown className="prose max-w-none font-handwriting">{letterContent}</ReactMarkdown>
+          <ReactMarkdown className="prose max-w-none">{letterContent}</ReactMarkdown>
         </div>
       ) : (
         <div>Loading...</div>

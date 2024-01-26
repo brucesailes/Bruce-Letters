@@ -2,14 +2,14 @@ import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter'; // Import gray-matter
 import React from 'react';
-import Letter from '../components/Letter'; 
+import Letter from '../components/Letter';
 
-// Define an interface for the structure of your posts
 interface Post {
   content: string;
+  slug: string;
   title: string;
   date: string;
-  slug: string; 
+
 }
 
 export default function LettersPage({ posts = [] }: { posts?: Post[] }) {
@@ -31,7 +31,7 @@ export async function getServerSideProps() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const postFiles = await fs.readdir(postsDirectory);
 
-  const posts: Post[] = await Promise.all(
+  const posts = await Promise.all(
     postFiles.map(async (filename) => {
       const filePath = path.join(postsDirectory, filename);
       const fileContent = await fs.readFile(filePath, 'utf8');
@@ -39,18 +39,11 @@ export async function getServerSideProps() {
       // Parse the file content using gray-matter
       const matterResult = matter(fileContent);
 
-      // Extract the title and date from the front matter
-      const title = matterResult.data.title || 'Title';
-
-      // Convert the date to a serializable string
-      const date = matterResult.data.date ? new Date(matterResult.data.date).toLocaleDateString() : 'Date';
-
-
       return {
         content: matterResult.content,
-        title,
-        date,
         slug: filename.replace('.md', ''), // Remove the .md file extension from the slug
+        title: matterResult.data.title || 'Untitled',
+        date: matterResult.data.date || 'Date', 
       };
     })
   );
@@ -61,3 +54,4 @@ export async function getServerSideProps() {
     },
   };
 }
+
