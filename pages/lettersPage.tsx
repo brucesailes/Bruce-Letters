@@ -1,25 +1,28 @@
 import fs from 'fs/promises';
 import path from 'path';
-import matter from 'gray-matter'; // Import gray-matter
+import matter from 'gray-matter';
 import React from 'react';
 import Letter from '../components/Letter';
 
 interface Post {
   content: string;
   slug: string;
-  title: string;
-  date: string;
-
+  Title: string;
+  Date: string;
 }
 
 export default function LettersPage({ posts = [] }: { posts?: Post[] }) {
+  if (posts.length === 0) {
+    return <div>No letters found.</div>;
+  }
+
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">The Letters to Mankind</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {posts.map((post, index) => (
-            <Letter key={index} post={post} />
+          {posts.map((post) => (
+            <Letter key={post.slug} post={post} />
           ))}
         </div>
       </div>
@@ -35,18 +38,19 @@ export async function getServerSideProps() {
     postFiles.map(async (filename) => {
       const filePath = path.join(postsDirectory, filename);
       const fileContent = await fs.readFile(filePath, 'utf8');
-
-      // Parse the file content using gray-matter
-      const matterResult = matter(fileContent);
+      const { content, data } = matter(fileContent);
 
       return {
-        content: matterResult.content,
-        slug: filename.replace('.md', ''), // Remove the .md file extension from the slug
-        title: matterResult.data.title || 'Untitled',
-        date: matterResult.data.date || 'Date', 
+        content,
+        slug: filename.replace('.md', ''),
+        Title: data.Title || 'Untitled',
+        Date: data.Date || 'No Date', 
       };
     })
   );
+
+  // Optional: Sort posts by date
+  posts.sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime());
 
   return {
     props: {
@@ -54,4 +58,5 @@ export async function getServerSideProps() {
     },
   };
 }
+
 

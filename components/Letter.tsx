@@ -4,8 +4,8 @@ import Link from 'next/link';
 interface LetterProps {
   post: {
     content: string;
-    title: string;
-    date: string;
+    Title: string;
+    Date: string;
     slug: string; 
   };
 }
@@ -15,11 +15,11 @@ const Letter: React.FC<LetterProps> = ({ post }) => {
 
   return (
     <div className="bg-white p-4 rounded shadow-md hover:shadow-lg">
-       <h2 className="text-xl text-center font-semibold mb-2">{post.title}</h2>
-       <h2 className="text-xl text-center font-semibold mb-2">{post.date}</h2>
+       <h2 className="text-xl text-center font-semibold mb-2">{post.Title}</h2>
+       <h2 className="text-xl text-center font-semibold mb-2">{post.Date}</h2>
       {/* <p className="text-gray-600 mb-2">{post.date}</p>
       <p className="mb-4">{teaser}...</p> */} 
-      <Link legacyBehavior href={`/letters/${post.title}`}>
+      <Link legacyBehavior href={`/letters/${post.Title}`}>
         <a className="text-blue-500 hover:underline">Read More</a>
       </Link>
     </div>

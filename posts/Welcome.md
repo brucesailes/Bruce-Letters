@@ -1,7 +1,13 @@
 ---
-title: Welcome
-date: January 25, 2024
----
+
+Title: Welcome
+
+Date: January 25, 2024
+
+--- 
+
+
+## Welcome 
 
 This blog is dedicated to those who hold a deep belief in God and recognize the significance of spiritual and personal growth.
 

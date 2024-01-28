@@ -1,0 +1,33 @@
+.prose h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #2a2a2a; /* A dark shade for primary headers */
+}
+
+.prose h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #4a4a4a; /* A slightly lighter shade for secondary headers */
+}
+
+.prose h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  color: #6a6a6a; /* An even lighter shade for tertiary headers */
+}
+
+.prose p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333; /* Standard text color */
+}
+
+/* Additional styles can be added as needed */
+
+  
