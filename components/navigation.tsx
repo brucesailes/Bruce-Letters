@@ -11,7 +11,7 @@ export default function Navigation() {
           <Link legacyBehavior href="/lettersPage">
             <a className="text-blue-600 hover:text-black-300">
               <Image
-                src="/images/Letter.png"
+                src="/Letters.png"
                 alt="Logo"
                 width={100} // Set the width in pixels
                 height={70} // Set the height in pixels
