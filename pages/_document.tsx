@@ -1,5 +1,6 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+
 import Navigation from '@/components/navigation'; 
 import Footer from '@/components/footer';
 
@@ -8,9 +9,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Letters to ManKind</title>
+          {/* Add meta tags here */}
+          <title>Letters to ManKind</title> 
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="UTF-8" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/Letters.png" />
           <meta
             name="description"
             content="Letters to ManKind"
