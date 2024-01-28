@@ -1,8 +1,10 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navigation from '@/components/navigation'; 
 import Footer from '@/components/footer';
+
+
 
 class MyDocument extends Document {
   render() {
@@ -38,6 +40,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <Footer />
+          <SpeedInsights />
         </body>
       </Html>
     );
