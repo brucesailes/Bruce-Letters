@@ -6,7 +6,7 @@ export default function About() {
     <div className="bg-white p-6 rounded-lg shadow-md">
       <div className="">
         <Image
-          src='/bruce.png'
+          src='/image/bruce.png'
           alt="Bruce Sailes"
           width={200} // Set the width in pixels
           height={200} // Set the height in pixels
