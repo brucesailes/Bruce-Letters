@@ -12,7 +12,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {/* Add meta tags here */}
-          <title>Letters to ManKind</title> 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="UTF-8" />
           <link rel="icon" href="/Letters.png" />
