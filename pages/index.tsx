@@ -43,8 +43,7 @@ export default function HomePage({ posts }: { posts: Post[] }) {
           {/* Button to navigate to "Letters to Mankind" page */}
           <div className="flex justify-center mb-8">
             <Link legacyBehavior href="/lettersPage">
-              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">The
-                Letters to Mankind
+              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">Read Letters
               </a>
             </Link>
           </div>
