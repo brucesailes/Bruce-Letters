@@ -19,8 +19,6 @@ export default function HomePage({ posts }: { posts: Post[] }) {
 
         {/* Letters to Mankind Section */}
         <div className="bg-white p-4 rounded shadow-md mb-8">
-          <Link legacyBehavior href="/lettersPage">
-            <a className="text-blue-600 hover:text-black-300">
               <Image
                 src='/Letters.png'
                 alt="Letters to Mankind"
@@ -28,8 +26,6 @@ export default function HomePage({ posts }: { posts: Post[] }) {
                 height={200} // Set the height in pixels
                 className="rounded-full mx-auto mb-4"
               />
-            </a>
-          </Link>
           <p>
             The &ldquo;Letters to Mankind&rdquo; is not just a blog; it&apos;s a source of daily inspiration and motivation for individuals who seek empowerment and guidance on their life journey. This blog is dedicated to those who hold a deep belief in God and recognize the significance of spiritual and personal growth. Here, you will find a collection of heartfelt letters, each written with the intention of uplifting and inspiring mankind.
           </p>
@@ -43,7 +39,7 @@ export default function HomePage({ posts }: { posts: Post[] }) {
           {/* Button to navigate to "Letters to Mankind" page */}
           <div className="flex justify-center mb-8">
             <Link legacyBehavior href="/lettersPage">
-              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded">Read Letters
+              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full">Read Letters
               </a>
             </Link>
           </div>
