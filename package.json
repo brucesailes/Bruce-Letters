@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "type": "module",
     "@vercel/speed-insights": "^1.0.8",
     "email-verification": "^0.4.6",
     "gray-matter": "^4.0.3",
