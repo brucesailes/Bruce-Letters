@@ -15,7 +15,7 @@ export default function HomePage({ posts }: { posts: Post[] }) {
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="container mx-auto px-4">
 
-      <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">&apos;Being prolific is not about quantity; it&apos;s about consistently delivering quality in abundance.&apos;</h2>
+      <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">Un-Learn, Re-Learn, and Build...</h2>
 
         {/* Letters to Mankind Section */}
         <div className="bg-white p-4 rounded shadow-md mb-8">
