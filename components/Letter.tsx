@@ -10,7 +10,7 @@ interface letterProps {
   };
 }
 
-const Letter: React.FC<letterProps> = ({ post }) => {
+const letter: React.FC<letterProps> = ({ post }) => {
   const teaser = post.content.substring(0, 200); // Display the first 200 characters as a teaser
 
   return (
@@ -26,5 +26,5 @@ const Letter: React.FC<letterProps> = ({ post }) => {
   );
 };
 
-export default Letter;
+export default letter;
 
