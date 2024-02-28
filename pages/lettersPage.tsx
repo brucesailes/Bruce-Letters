@@ -2,7 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import React from 'react';
-import Letter from '../components/letter';
+import Letter from '../components/letter'; 
+
 
 interface Post {
   content: string;
@@ -11,7 +12,7 @@ interface Post {
   Date: string;
 }
 
-export default function LettersPage({ posts = [] }: { posts?: Post[] }) {
+export default function lettersPage({ posts = [] }: { posts?: Post[] }) {
   if (posts.length === 0) {
     return <div>No letters found.</div>;
   }

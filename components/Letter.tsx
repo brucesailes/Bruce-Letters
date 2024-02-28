@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface LetterProps {
+interface letterProps {
   post: {
     content: string;
     Title: string;
@@ -10,7 +10,7 @@ interface LetterProps {
   };
 }
 
-const Letter: React.FC<LetterProps> = ({ post }) => {
+const Letter: React.FC<letterProps> = ({ post }) => {
   const teaser = post.content.substring(0, 200); // Display the first 200 characters as a teaser
 
   return (
