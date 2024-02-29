@@ -23,7 +23,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ContactForm.jsx", "pages/api/apiLetters/[slug]", "pages/contact.jsx", "components/footer.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ContactForm.jsx", "pages/api/Letters/[slug]", "pages/contact.jsx", "components/footer.tsx"],
   "exclude": ["node_modules"]
 }
 

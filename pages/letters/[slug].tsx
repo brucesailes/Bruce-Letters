@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from './LettersPage.module.css'; // Ensure this path is correct
-
-let Markdown: any;
-import('markdown-to-jsx').then(module => {
-  Markdown = module.default || module;
-});
+import Markdown from 'markdown-to-jsx';
+// let Markdown: any;
+// import('markdown-to-jsx').then(module => {
+//   Markdown = module.default || module;
+// });
 
 const LetterPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const [letter, setLetter] = useState({ content: '', title: '', date: '' });
+  const [letter, setLetter] = useState({ content: '' });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (slug) {
       setLoading(true);
-      fetch(`/api/letters/${slug}`)
+      fetch(`/api/Letters/${slug}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -25,7 +25,7 @@ const LetterPage = () => {
           return response.json();
         })
         .then((data) => {
-          setLetter({ content: data.content, title: data.title, date: data.date });
+          setLetter({ content: data.content });
           setLoading(false);
         })
         .catch((error) => {
@@ -40,9 +40,7 @@ const LetterPage = () => {
   }
 
   return (
-    <div className="bg-white p-8 md:p-20 rounded shadow-md">
-      <h1 className="text-center text-3xl font-bold mb-4">{letter.title}</h1>
-      <p className="text-center mb-4">{letter.date}</p>
+    <div className="p-8 md:p-20 rounded shadow-md">
       <Markdown className={styles.prose} options={{ forceBlock: true }}>
         {letter.content}
       </Markdown>
