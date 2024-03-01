@@ -15,10 +15,10 @@ export default function HomePage({ posts }: { posts: Post[] }) {
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="container mx-auto px-4">
 
-      <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">Un-Learn, Re-Learn, and Build...</h2>
+      <h2 className="text-4xl font-bold text-center mb-8 text-blue-600 transition-transform transform hover:scale-105">Un-Learn, Re-Learn, and Build...</h2>
 
         {/* Letters to Mankind Section */}
-        <div className="bg-white p-4 rounded shadow-md mb-8">
+        <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
               <Image
                 src='/Letters.png'
                 alt="Letters to Mankind"
@@ -39,19 +39,19 @@ export default function HomePage({ posts }: { posts: Post[] }) {
           {/* Button to navigate to "Letters to Mankind" page */}
           <div className="flex justify-center mb-8">
             <Link legacyBehavior href="/lettersPage">
-              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full">Read Letters
+              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition-transform transform hover:scale-105">Read Letters
               </a>
             </Link>
           </div>
         </div>
 
         {/* About Component (Moved below "Letters to Mankind") */}
-        <div className="bg-white p-4 rounded shadow-md mb-8">
+        <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
           <About />
         </div>
 
         {/* Contact Component */}
-        <div className="bg-white p-4 rounded shadow-md">
+        <div className="bg-white p-4 rounded shadow-md transition-transform transform hover:scale-105">
           <Contact />
         </div>
       </div>

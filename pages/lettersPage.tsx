@@ -20,8 +20,8 @@ export default function lettersPage({ posts = [] }: { posts?: Post[] }) {
   return (
     <div className="bg-gray-100 min-h-screen py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">The Letters to Mankind</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <h1 className="text-4xl font-bold text-center mb-8 text-blue-600 transition-transform transform hover:scale-105">The Letters to Mankind</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {posts.map((post) => (
             <Letter key={post.slug} post={post} />
           ))}
