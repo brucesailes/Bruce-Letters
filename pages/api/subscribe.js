@@ -1,5 +1,5 @@
 // pages/api/subscribe.js
-import db from '../../firebase/initFirebase';
+import db from '@/firebase/initfirebase';
 import { collection, addDoc } from 'firebase/firestore';
 
 // Helper function to validate emails

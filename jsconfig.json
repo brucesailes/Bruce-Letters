@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/firebase/*": ["./path/to/your/firebase/folder/*"]
+      }
+    }
+  }
+  
