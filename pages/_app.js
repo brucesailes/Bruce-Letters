@@ -1,16 +1,16 @@
-import type { AppProps } from 'next/app'
+
 import '../styles/globals.css'
 import Head from 'next/head'
+import Layout from '../components/Layout'
  
-export default function App({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }) {
   
   return (
     <>
     <Head>
-      <title>Letters to Mankind</title> 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
-      <link rel="icon" href="/Letters.png" />
+      <link rel="icon" href="/bruce-revamp.png" />
           <meta
             name="description"
             content="Letters to ManKind"
@@ -25,7 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
             crossOrigin=""
           />
     </Head>
+
+    <Layout>
       <Component {...pageProps} />
+    </Layout>
   </>
   )
 }

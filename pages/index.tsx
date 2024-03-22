@@ -1,7 +1,8 @@
 // pages/index.tsx
 import Link from 'next/link';
-import About from './about';
-import Contact from '../pages/contact';
+import Head from 'next/head'
+import About from './About ';
+import Contact from './Contact';
 import Image from 'next/image';
 
 interface Post {
@@ -10,13 +11,22 @@ interface Post {
   date: string;
 }
 
-export default function HomePage({ posts }: { posts: Post[] }) {
+export default function BlogPage({ posts }: { posts: Post[] }) {
   return (
     <div className="bg-gray-100 min-h-screen py-8">
+      <Head>
+      <title>Home</title> 
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div className="container mx-auto px-4">
-
-      <h2 className="text-4xl font-bold text-center mb-8 text-blue-600 transition-transform transform hover:scale-105">Un-Learn, Re-Learn, and Build...</h2>
-
+      <div className="border border-gray-300 rounded-lg shadow-lg bg-white p-6 mb-8 transition-transform transform hover:scale-105">
+        <p className="text-2xl font-bold text-center mb-8 text-blue-600">PRIOR TO YOUR JOURNEY</p>
+        <p className="text-lg text-center text-gray-700 mb-8">Receive the newest edition of The Letters to Mankind directly in your inbox.</p>
+        <p className="text-lg text-center text-gray-700 mb-8">Become part of a global community that&apos;s weekly enlightened by The Letters to Mankind. Discover insights on life, spiritual growth, and business acumen.</p>
+        <div className="flex justify-center mb-8">
+          <a href="https://theletterstomankind-newsletter.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">Click to Subscribe</a>
+        </div>
+      </div>
         {/* Letters to Mankind Section */}
         <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
               <Image
@@ -38,18 +48,16 @@ export default function HomePage({ posts }: { posts: Post[] }) {
 
           {/* Button to navigate to "Letters to Mankind" page */}
           <div className="flex justify-center mb-8">
-            <Link legacyBehavior href="/lettersPage">
-              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition-transform transform hover:scale-105">Read Letters
+            <Link legacyBehavior href="/Blog">
+              <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-5 py-2 px-5 rounded-full transition-transform transform hover:scale-105">Read Letters
               </a>
             </Link>
           </div>
         </div>
-
-        {/* About Component (Moved below "Letters to Mankind") */}
-        <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
+           {/* About Component (Moved below "Letters to Mankind") */}
+           <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
           <About />
         </div>
-
         {/* Contact Component */}
         <div className="bg-white p-4 rounded shadow-md transition-transform transform hover:scale-105">
           <Contact />

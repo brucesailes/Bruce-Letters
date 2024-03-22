@@ -14,7 +14,7 @@ const LetterPage = () => {
   useEffect(() => {
     if (slug) {
       setLoading(true);
-      fetch(`/api/Letters/${slug}`)
+      fetch(`/api/letters/${slug}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

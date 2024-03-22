@@ -33,7 +33,7 @@ export default function ContactForm() {
     }
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/Contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ export default function ContactForm() {
       <div className="text-center">
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300 transition-transform transform hover:scale-105"
+          className="bg-blue-500 text-white mb-5 py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300 transition-transform transform hover:scale-105"
         >
           Send Message
         </button>

@@ -23,7 +23,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ContactForm.jsx", "pages/api/Letters/[slug]", "pages/contact.jsx", "components/footer.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/ContactForm.jsx",
+    "pages/api/letters/[slug]",
+    "pages/Contact/index.jsx",
+    "components/Footer.jsx"
+, "components/Navigation.jsx", "pages/_app.js", "pages/_document.jsx", "pages/About /index.tsx"  ],
   "exclude": ["node_modules"]
 }
-

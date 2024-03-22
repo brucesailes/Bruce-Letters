@@ -1,14 +1,12 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Navigation from '@/components/navigation'; 
-import Footer from '@/components/footer';
 
 
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang='en'>
         <Head>
         <link
             href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
@@ -16,10 +14,8 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <Navigation />
           <Main />
           <NextScript />
-          <Footer />
         </body>
       </Html>
     );
