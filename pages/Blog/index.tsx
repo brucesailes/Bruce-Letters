@@ -11,9 +11,12 @@ interface Post {
   slug: string;
   Title: string;
   Date: string;
+  Image: string;
 }
 
-export default function lettersPage({ posts = [] }: { posts?: Post[] }) {
+
+export default function lettersPage({ posts = [] }: { posts?: Post[] })
+{
   if (posts.length === 0) {
     return <div>No letters found.</div>;
   }
@@ -60,12 +63,14 @@ export async function getServerSideProps() {
       const filePath = path.join(postsDirectory, filename);
       const fileContent = await fs.readFile(filePath, 'utf8');
       const { content, data } = matter(fileContent);
+      
 
       return {
         content,
         slug: filename.replace('.md', ''),
         Title: data.Title || 'Untitled',
-        Date: data.Date || 'No Date', 
+        Date: data.Date || 'No Date',
+        Image: data.Image || '/Letters.png', // Extract Image field from YAML front matter
       };
     })
   );
