@@ -13,13 +13,18 @@ export default function Footer() {
           </a>
             </li>
             <li>
-            <a className="transition-transform transform hover:scale-105"  href="https://github.com/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on GitHub">
-          <Image src="/github.svg" alt="GitHub"  width={20} height={20} />
+            <a className="transition-transform transform hover:scale-105"  href="https://www.youtube.com/@BruceSailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on YouTube">
+            <Image src="/youtube.svg" alt="YouTube"  width={20} height={20} />
           </a>
             </li>
             <li>
-            <a className="transition-transform transform hover:scale-105"  href="https://www.youtube.com/@BruceSailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on YouTube">
-            <Image src="/youtube.svg" alt="YouTube"  width={20} height={20} />
+              <a className="transition-transform transform hover:scale-105" href="https://www.instagram.com/thebrucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on Instagram">
+              <Image src="/instagram.svg" alt="Instagram"  width={20} height={20} />
+              </a>
+            </li>
+            <li>
+            <a className="transition-transform transform hover:scale-105"  href="https://github.com/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on GitHub">
+          <Image src="/github.svg" alt="GitHub"  width={20} height={20} />
           </a>
             </li>
           </ul>
