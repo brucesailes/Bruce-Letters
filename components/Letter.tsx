@@ -23,7 +23,7 @@ const Letter: React.FC<LetterProps> = ({ post }) => {
        {/* Render Image component only if post.Image is not empty */}
        {post.Image && (
          <div className="relative w-full h-80 flex justify-center items-center mb-2">
-           <Image src={post.Image} alt={post.Title} width={250} height={250} />
+           <Image className="rounded-2xl" src={post.Image} alt={post.Title} width={250} height={250} />
          </div>
        )}
       <p className="text-gray-600 mb-2">{post.Date}</p>

@@ -30,12 +30,16 @@ export default function About(): ReactElement {
             <Image src="/linkedin.svg" alt="LinkedIn"  width={50} height={50} />
           </a>
 
-          <a className="transition-transform transform hover:scale-105" href="https://github.com/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on GitHub">
-          <Image src="/github.svg" alt="GitHub"  width={50} height={50} />
-          </a>
-
           <a className="transition-transform transform hover:scale-105"  href="https://www.youtube.com/@BruceSailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on YouTube">
             <Image src="/youtube.svg" alt="YouTube"  width={50} height={50} />
+          </a>
+
+          <a className="transition-transform transform hover:scale-105"  href="https://www.instagram.com/thebrucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on Instagram">
+            <Image src="/instagram.svg" alt="YouTube"  width={50} height={60} />
+          </a>
+
+          <a className="transition-transform transform hover:scale-105" href="https://github.com/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on GitHub">
+          <Image src="/github.svg" alt="GitHub"  width={50} height={50} />
           </a>
 
         </div>

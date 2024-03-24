@@ -28,9 +28,9 @@ export default function BlogPage({ posts }: { posts: Post[] }) {
         </div>
       </div>
         {/* Letters to Mankind Section */}
-        <div className="bg-white p-4 rounded shadow-md mb-8 transition-transform transform hover:scale-105">
+        <div className="bg-white p-4 rounded-lg shadow-md mb-8 transition-transform transform hover:scale-105">
               <Image
-                src='/Letters.png'
+                src='/Mental.svg'
                 alt="Letters to Mankind"
                 width={200} // Set the width in pixels
                 height={200} // Set the height in pixels

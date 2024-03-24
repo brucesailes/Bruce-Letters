@@ -70,7 +70,7 @@ export async function getServerSideProps() {
         slug: filename.replace('.md', ''),
         Title: data.Title || 'Untitled',
         Date: data.Date || 'No Date',
-        Image: data.Image || '/Letters.png', // Extract Image field from YAML front matter
+        Image: data.Image || '/Mental.svg', // Extract Image field from YAML front matter
       };
     })
   );
