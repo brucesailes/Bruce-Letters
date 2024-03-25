@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import Head from 'next/head'
 import Layout from '../components/Layout'
  
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, props }) {
   
   return (
     <>
@@ -25,10 +25,9 @@ export default function MyApp({ Component, pageProps }) {
             crossOrigin=""
           />
     </Head>
-
     <Layout>
       <Component {...pageProps} />
     </Layout>
   </>
-  )
+  );
 }

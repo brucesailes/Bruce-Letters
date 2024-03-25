@@ -59,7 +59,7 @@ export default function Courses() {
         <meta property="og:description" content="Start your comprehensive digital education with our expertly designed courses tailored for modern digital professionals." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="flex flex-col min-h-screen justify-center items-center bg-gray-900 text-white p-6">
+      <div className="flex flex-col min-h-screen justify-center items-center bg-gray-100 dark:bg-gray  text-white dark:text-black p-6">
         <h1 className="text-4xl font-bold mb-4">Coming Soon...</h1>
         <h2 className="text-3xl font-bold mb-6">Empower Your Digital Journey</h2>
         <p className="text-xl mb-4">Your one-stop platform for learning web development, digital marketing, entrepreneurship, and more. 🚀</p>

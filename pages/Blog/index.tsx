@@ -22,7 +22,7 @@ export default function lettersPage({ posts = [] }: { posts?: Post[] })
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen py-8">
+    <div className="bg-gray-100 dark:bg-gray  min-h-screen py-8">
       <Head>
         <title>Letters to Mankind</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

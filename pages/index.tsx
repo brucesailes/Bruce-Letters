@@ -11,9 +11,9 @@ interface Post {
   date: string;
 }
 
-export default function BlogPage({ posts }: { posts: Post[] }) {
+export default function Home({ posts }: { posts: Post[] }) {
   return (
-    <div className="bg-gray-100 min-h-screen py-8">
+    <div className="bg-gray-100 dark:bg-gray min-h-screen py-8">
       <Head>
       <title>Home</title> 
       <meta name="viewport" content="width=device-width, initial-scale=1" />

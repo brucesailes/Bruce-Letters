@@ -32,6 +32,6 @@
     "pages/api/letters/[slug]",
     "pages/Contact/index.jsx",
     "components/Footer.jsx"
-, "components/Navigation.jsx", "pages/_app.js", "pages/_document.jsx", "pages/About /index.tsx"  ],
+, "components/Navigation.jsx", "pages/_app.js", "pages/_document.jsx", "pages/About /index.tsx", "hooks/useStickyNavigation.js"  ],
   "exclude": ["node_modules"]
 }
